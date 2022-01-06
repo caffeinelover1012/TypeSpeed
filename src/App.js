@@ -50,12 +50,11 @@ function App() {
       <div className="infosection">
          <br/>
          {text && <table style={{"tableLayout":'fixed'}}>
-          <td><h2>Preview?&nbsp;<input type={'checkbox'} onClick={changePreview}></input></h2></td>
-             <tr><h1><em> Words Typed: <font color = "green"><b>&nbsp;{words}</b></font></em></h1>
-             </tr>
-             <tr><h1><em>Typing Speed: <font color = "green"><b>&nbsp;{speed}</b></font> Words per minute</em></h1></tr>
-             <tr><h1><em>Time to read: <font color = "green"><b>&nbsp;{parseInt(words*(6/25))+1}</b></font> seconds</em></h1></tr>
-             {preview && <tr style={{'maxWidth':'400px'}}><h2>Preview:</h2></tr>}
+          <td><h2>Preview?&nbsp;&nbsp;&nbsp;&nbsp;<label class="switch"> &nbsp;<input type={'checkbox'} onClick={changePreview}/><span class="slider round"></span></label></h2></td>
+          <tr><h1><em> Words Typed: <font color = "green"><b>&nbsp;{words}</b></font></em></h1></tr>
+          <tr><h1><em>Typing Speed: <font color = "green"><b>&nbsp;{speed}</b></font> Words per minute</em></h1></tr>
+          <tr><h1><em>Time to read: <font color = "green"><b>&nbsp;{parseInt(words*(6/25))+1}</b></font> seconds</em></h1></tr>
+          {preview && <tr style={{'maxWidth':'400px'}}><h2>Preview:</h2></tr>}
          </table>}
          {text && preview && <code style={{maxWidth:'400px',wordBreak:'break-all',wordWrap:'break-word',overflowWrap:'break-word',fontSize:'14px'}}>{text}</code>}
         </div>  
